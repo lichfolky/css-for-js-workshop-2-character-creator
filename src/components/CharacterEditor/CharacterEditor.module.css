@@ -5,6 +5,7 @@
 
 .maxWidthWrapper {
   max-width: 65%;
+  isolation: isolate;
 }
 
 .header {
@@ -30,7 +31,7 @@
   max-width: 45%;
   height: 100%;
   position: fixed;
-  top: 0px;
+  top: 0;
   right: 0;
 }
 
@@ -45,4 +46,35 @@
   height: 50%;
   top: 50%;
   left: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: none;
+  }
+
+  .characterEditor {
+    padding-top: 60vh;
+  }
+
+  .maxWidthWrapper {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .controlColumn {
+    max-width: 100%;
+    display: flex;
+    overflow: auto;
+    gap: 1rem;
+    position: relative;
+  }
+
+  .characterWrapper {
+    left: 0;
+  }
+
 }
